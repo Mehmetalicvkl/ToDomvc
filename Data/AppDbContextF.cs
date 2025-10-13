@@ -8,7 +8,7 @@ namespace ToDomvs.Data
         public AppDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseSqlite("Data Source=ToDomvc.db"); 
+            optionsBuilder.UseSqlite("Data Source=ToDomvs.db"); 
 
             return new AppDbContext(optionsBuilder.Options);
         }

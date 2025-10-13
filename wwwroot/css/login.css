@@ -1,8 +1,5 @@
-/* register.css */
-
-/* Center the registration container */
-.register-container {
-    max-width: 400px;
+﻿.login-container {
+        max-width: 400px;
     margin: 50px auto;
     padding: 25px;
     background-color: #f8f9fa; /* light gray background */
@@ -10,28 +7,20 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
-    /* Form groups spacing */
-    .register-container .form-group {
+    .login-container .form-group {
         margin-bottom: 15px;
     }
-
-    /* Labels styling */
-    .register-container label {
+    .login-container label {
         font-weight: 500;
     }
-
-    /* Inputs styling */
-    .register-container input.form-control {
+    .login-container input.form-control {
         width: 100%;
         padding: 8px 12px;
         font-size: 14px;
         border: 1px solid #ced4da;
         border-radius: 5px;
     }
-
-    /* Button styling */
-    .register-container button.btn-primary {
+    .login-container button.btn-primary {
         background-color: #007bff;
         border-color: #007bff;
         font-weight: 500;
@@ -40,22 +29,12 @@
         border-radius: 5px;
         cursor: pointer;
     }
-
-        .register-container button.btn-primary:hover {
+        .login-container button.btn-primary:hover {
             background-color: #0056b3;
             border-color: #0056b3;
         }
-
-    /* Heading style */
-    .register-container h2 {
+    .login-container h2 {
         margin-bottom: 25px;
         font-size: 24px;
     }
-
-/* Result div for messages */
-#result {
-    font-size: 14px;
-    color: #dc3545; /* red for errors, you can override in JS */
 }
-
-    
