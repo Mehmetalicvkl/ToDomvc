@@ -55,9 +55,9 @@ namespace ToDomvs.Controllers
             var user = _context.Users.FirstOrDefault(u => u.Username == request.Identifier || u.Email == request.Identifier);
 
             if (user == null || user.PasswordHash != HashPassword(request.Password))
-                return Ok(new { success = false, message = "Kullanıcı adı veya şifre yanlış/Kullanıcı bulunamadı." });
+                return Ok(new { success = false, message = "Invalid username/email or password." });
 
-            return Ok(new { success = true, message = "Başarılı" });
+            return Ok(new { success = true, message = "Success" });
         }
     }
 

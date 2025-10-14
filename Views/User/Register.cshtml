@@ -1,28 +1,30 @@
-
-<a asp-controller="User" asp-action="Register">Register</a>
-<link rel="stylesheet" href="~/css/register.css" />
+@section Styles {
+    <link rel="stylesheet" href="~/css/register.css" asp-append-version="true" />
+}
 
 <div class="register-container">
     <form id="registerForm">
         <div class="form-group">
-            <label for="username">Kullanýcý Adý</label>
-            <input type="text" id="username" class="form-control" placeholder="Kullanýcý adýnýzý girin" required />
+            <label for="username">Username</label>
+            <input type="text" id="username" class="form-control" placeholder="Enter your username" required />
         </div>
 
         <div class="form-group">
-            <label for="email">E-posta</label>
-            <input type="email" id="email" class="form-control" placeholder="E-posta adresiniz" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" required />
         </div>
 
         <div class="form-group">
-            <label for="password">Þifre</label>
-            <input type="password" id="password" class="form-control" placeholder="Þifrenizi girin" required />
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" required />
         </div>
 
-        <button type="submit" class="btn btn-primary w-100 mt-3">Kayýt Ol</button>
-        <button type="button" id="loginBtn" class="btn btn-primary w-100 mt-3">Giriþ Yap</button>
+        <button type="submit" class="btn btn-primary w-100 mt-3">Sign Up</button>
+        <br />
+        <br />
+        <button type="button" id="loginBtn" class="btn btn-primary w-100 mt-3">Sign In</button>
     </form>
 
     <div id="result" class="mt-3 text-center"></div>
 </div>
-    <script src="~/js/register.js"></script>
+    <script src="~/js/register.js" asp-append-version="true"></script>

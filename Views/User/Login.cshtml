@@ -3,34 +3,33 @@
 }
 
 <a asp-controller="User" asp-action="Login">Login</a>
-<link rel="stylesheet" href="~/css/login.css" />
+@section Styles {
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+}
 
 <div class="login-container">
     <form id="loginForm">
         <div class="form-group">
-            <label for="identifier">Kullanıcı Adı veya E-posta</label>
-            <input type="text" id="identifier" class="form-control" placeholder="Kullanıcı adınızı veya e-posta girin" required />
+            <label for="identifier">Username or Email</label>
+            <input type="text" id="identifier" class="form-control" placeholder="Enter your username or email" required />
         </div>
 
         <div class="form-group">
-            <label for="password">Şifre</label>
-            <input type="password" id="password" class="form-control" placeholder="Şifrenizi girin" required />
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" required />
         </div>
 
-        <button type="submit" class="btn btn-primary w-100 mt-3">Giriş Yap</button>
+        <button type="submit" class="btn btn-primary w-100 mt-3">Sign In</button>
     </form>
 
     <div id="loginResult" class="mt-3 text-center"></div>
 
     <div class="mt-2 text-center">
-        <span>Hesabınız yok mu? </span>
+        <span>Don't have an account? </span>
         <a href="/User/Register" style="color: inherit; text-decoration: none; cursor: pointer;">
-            Kayıt Ol
+            Sign Up
         </a>
-
-
-
 
     </div>
 </div>
-    <script src="~/js/login.js"></script>
+    <script src="~/js/login.js" asp-append-version="true"></script>
