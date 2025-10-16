@@ -4,13 +4,16 @@
     const identifier = document.getElementById("identifier").value;
     const password = document.getElementById("password").value;
     const loginResult = document.getElementById("result");
-
     try {
-        const response = await fetch('/api/User/login', {
+        const response = await fetch('/api/UserApi/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ identifier, password })
         });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
         const data = await response.json();
 
@@ -22,16 +25,13 @@
         }
 
         if (data.success) {
-            window.location.href = "/";
+            window.location.href = "/Task/Main";
         }
-
     } catch (err) {
         console.error(err);
-        loginResult.innerText = "Bir hata oluştu!";
-        loginResult.style.color = 'red';
-    }
-
-    if (data.success) {
-        window.location.href = "Main";
+        if (loginResult) {
+            loginResult.innerText = "Bir hata oluştu!";
+            loginResult.style.color = 'red';
+        }
     }
 });

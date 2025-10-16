@@ -33,5 +33,9 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=User}/{action=Register}/{id?}")
     .WithStaticAssets();
+app.MapControllerRoute(
+    name: "tasks",
+    pattern: "{controller=Task}/{action=Main}/{id?}")
+    .WithStaticAssets();
 
 app.Run();

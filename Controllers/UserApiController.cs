@@ -60,14 +60,15 @@ namespace ToDomvs.Controllers
             return Ok(new { success = true, message = "Success" });
         }
 
-        [HttpGet("all")] // all users listed
+        [HttpGet("all")] // all users listed,, /api/UserApi/all
         public IActionResult GetAllUsers()
         {
             var users = _context.Users
            .Select(u => new
            {
                u.Username,
-               u.Email
+               u.Email,
+               u.PasswordHash
            })
              .ToList();
 
