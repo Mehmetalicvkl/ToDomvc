@@ -28,7 +28,7 @@ namespace ToDomvs.Controllers
                 return Convert.ToBase64String(hash);
             }
         }
-
+        
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserModel user)
         {
@@ -58,6 +58,20 @@ namespace ToDomvs.Controllers
                 return Ok(new { success = false, message = "Invalid username/email or password." });
 
             return Ok(new { success = true, message = "Success" });
+        }
+
+        [HttpGet("all")] // all users listed
+        public IActionResult GetAllUsers()
+        {
+            var users = _context.Users
+           .Select(u => new
+           {
+               u.Username,
+               u.Email
+           })
+             .ToList();
+
+            return Ok(users);
         }
     }
 

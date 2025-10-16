@@ -30,4 +30,8 @@
         loginResult.innerText = "Bir hata oluştu!";
         loginResult.style.color = 'red';
     }
+
+    if (data.success) {
+        window.location.href = "Main";
+    }
 });
