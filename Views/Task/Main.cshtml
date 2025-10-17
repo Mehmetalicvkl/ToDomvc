@@ -1,10 +1,17 @@
 ﻿@{
 	ViewData["Title"] = "Main";
 }
+@section Styles {
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+}
 
 
-<button>Show All Tasks</button>
-<button>Show Upcoming Tasks</button>
-<button>Show Tasks In Progress</button>
-<button>Show Tasks Done</button>
-<button>Don't Have Any Tasks? Add one!</button>
+
+    <h1>To DO List</h1>
+    <div class="button-container">
+        <button>Görev Ekle</button><br>
+        <button>Görevleri Listele</button><br>
+        <button>Görevi Sil</button><br>
+        <button>Çıkış</button>
+    </div>
+

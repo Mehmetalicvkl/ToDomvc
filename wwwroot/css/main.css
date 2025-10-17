@@ -1,0 +1,69 @@
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+}
+
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}
+
+       /* Buton kapsayıcı */
+        .button-container {
+            display: flex;
+            flex-direction: column;     /* Alt alta dizmek için column */
+            align-items: flex-start;    /* Sol tarafa hizala */
+            gap: 10px;                  /* Önceki gap 20px, %50 azaltıldı */
+            padding: 30px;
+            width: 250px;
+        }
+
+        /* Buton stili */
+        .button-container button {
+            position: relative;         /* Pseudo-element için gerekli */
+            width: 100%;                /* Kapsayıcı genişliği kadar */
+            height: 60px;               /* Buton yüksekliği */
+            border: 2px solid red;      /* Kırmızı border ile çevrili */
+            border-radius: 6px;
+            background-color: #fff;     /* İç beyaz */
+            color: #000;                /* Yazı siyah */
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;           /* Hover animasyonu */
+            overflow: hidden;           /* Aqua şerit taşmasını önler */
+        }
+
+        /* Aqua şerit sağ kenardan aşağıya doğru */
+        .button-container button::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;               /* Şerit kalınlığı */
+            height: 100%;             /* Butonun boyunu kapsıyor */
+            background-color: aqua;   /* Aqua renkli şerit */
+        }
+
+        /* Hover efekti */
+        .button-container button:hover {
+            transform: scale(1.05);          /* Hafif büyüme */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Gölge efekti */
+        }
+
+        /* Sayfa içeriği */
+        .content {
+            margin-left: 280px; /* Butonlar soldaysa içerik sağa kayar */
+            padding: 40px;
+        }
+ 
